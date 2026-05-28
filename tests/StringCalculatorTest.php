@@ -65,5 +65,15 @@ final class StringCalculatorTest extends TestCase
         $this->assertEquals("6", $res);
     }
 
+    /**
+     * @test
+     */
+    public function GivenStringWithDifferentSeparatorReturnsAddition()
+    {
+        $res = $this->nums->add("//;\n1;2");
+
+        $this->assertEquals("3", $res);
+    }
+
 
 }
