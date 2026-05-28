@@ -45,5 +45,15 @@ final class StringCalculatorTest extends TestCase
         $this->assertEquals(5, $res);
     }
 
+    /**
+     * @test
+     */
+    public function givenMoreThanTwoNumbersReturnsAddition()
+    {
+        $res = $this->nums->add("3,2,5");
+
+        $this->assertEquals("10",$res);
+    }
+
 
 }
