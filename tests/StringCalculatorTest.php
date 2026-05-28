@@ -21,4 +21,17 @@ final class StringCalculatorTest extends TestCase
         $this->assertEquals(0, $res);
     }
 
+    /**
+     * @test
+     */
+    public function givenOneNumberReturnsThatNumber()
+    {
+        $nums = new StringCalculator();
+
+        $res = $nums->add("3");
+
+        $this->assertEquals(3, $res);
+    }
+
+
 }
