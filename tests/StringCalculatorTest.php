@@ -9,14 +9,18 @@ use PHPUnit\Framework\TestCase;
 
 final class StringCalculatorTest extends TestCase
 {
+    private StringCalculator $nums;
+    protected function setUp():void
+    {
+        $this->nums = new StringCalculator();
+    }
+
     /**
      * @test
      */
     public function givenEmptyStringReturns0()
     {
-        $nums = new StringCalculator();
-
-        $res = $nums->add("");
+        $res = $this->nums->add("");
 
         $this->assertEquals(0, $res);
     }
@@ -26,9 +30,7 @@ final class StringCalculatorTest extends TestCase
      */
     public function givenOneNumberReturnsThatNumber()
     {
-        $nums = new StringCalculator();
-
-        $res = $nums->add("3");
+        $res = $this->nums->add("3");
 
         $this->assertEquals(3, $res);
     }
@@ -38,9 +40,7 @@ final class StringCalculatorTest extends TestCase
      */
     public function givenTwoNumbersReturnsAddition()
     {
-        $nums = new StringCalculator();
-
-        $res = $nums->add("3,2");
+        $res = $this->nums->add("3,2");
 
         $this->assertEquals(5, $res);
     }
