@@ -5,6 +5,7 @@ namespace Deg540\StringCalculatorPHP;
 class StringCalculator
 {
     public function add(string $numbers):int{
-        return 0;
+        if(strlen($numbers) == 0){return 0;}
+        return (intval($numbers));
     }
 }
