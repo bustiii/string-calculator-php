@@ -75,5 +75,15 @@ final class StringCalculatorTest extends TestCase
         $this->assertEquals("3", $res);
     }
 
+    /**
+     * @test
+     */
+    public function GivenStringWithOneNegativeNumberReturnsException()
+    {
+        $res = $this->nums->add("-3,2");
+
+        $this->assertEquals("negativos no soportados: -3", $res);
+    }
+
 
 }
