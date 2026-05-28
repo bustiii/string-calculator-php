@@ -55,5 +55,15 @@ final class StringCalculatorTest extends TestCase
         $this->assertEquals("10",$res);
     }
 
+    /**
+     * @test
+     */
+    public function givenStringWithLineJumpInStaidOfCommaReturnsAddition()
+    {
+        $res = $this->nums->add("1\n3,2");
+
+        $this->assertEquals("6", $res);
+    }
+
 
 }
